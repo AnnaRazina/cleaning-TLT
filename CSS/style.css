@@ -396,7 +396,7 @@ html {
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: rgb(107, 159, 228, 0.5);
    
    
@@ -420,6 +420,46 @@ html {
     align-self: center;
     font-size: 20px;
 }
+
+.btn-services-details {
+    width: 100%;
+    margin: 20px 0;
+    background-color: #474e93;
+    color: #f6fbff;
+    font-family: "OpenSans-Bold";
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.btn-services-details:hover {
+    background-color: #7a92df;
+    cursor: pointer;
+}
+.container-details-list {
+    display: none;
+    background-color: #7a92df;
+}
+.services-details-activ {
+    display: block; 
+}
+.services-details-list {
+    padding-left: 20px;
+    font-family: "OpenSans-Bold";
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+.btn-details-close {
+    display: block;
+    margin-left: auto;
+    background-color: #da3e3e;
+    font-family: "OpenSans-Bold";
+    text-transform: uppercase;
+}
+.btn-details-close:hover {
+    cursor: pointer;
+}
+
+
+
 
 .container-price {
    align-self: flex-end;

@@ -50,6 +50,24 @@ window.onscroll = function()  {
     };
 }
 
+//кнопки подробнее.
+
+let btnServicesDetails = Array.from(document.querySelectorAll(".btn-services-details"));
+let openServicesDetails = btnServicesDetails.forEach(btn => btn.addEventListener("click", event => {
+    event.preventDefault();
+    if(event.target.closest(".container-services-details").querySelector(".container-details-list")) {
+      btn.closest(".container-services-details").querySelector(".container-details-list").classList.add("services-details-activ")
+    }
+  }))
+
+let btnDetailsClose = Array.from(document.querySelectorAll(".btn-details-close"));
+let closeServicesDetails = btnDetailsClose.forEach(btn => btn.addEventListener("click", event => {
+    event.preventDefault();
+      if(event.target.closest(".container-services-details").querySelector(".container-details-list")) {
+       btn.closest(".container-services-details").querySelector(".container-details-list").classList.remove("services-details-activ")
+      }
+   }))
+
 
 // слайдер
 
