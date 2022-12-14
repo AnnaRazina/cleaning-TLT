@@ -281,6 +281,7 @@ html {
 
 
 .stock-discount {
+
  width: 20%;
  height: auto;
  margin-left: 2%;
@@ -295,7 +296,7 @@ html {
     justify-content: center;
     margin: 0 2%;
     /*padding: 0 5%;*/
-    width: 74%;
+    width: 76%;
     z-index: 500;
 }
 
