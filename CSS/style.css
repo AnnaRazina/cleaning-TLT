@@ -21,21 +21,22 @@ html {
 }
 .body {
     font-family: OpenSans-Regular OpenSans-Bold sans-serif;
-
     width: 100%;
     height: 100vh;
-
     background-image: url("../images/site-background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
-    /*-moz-background-size: 100%; /* Firefox 3.6+ */
-    /*-webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    /*-o-background-size: 100%; /* Opera 9.6+ */
     background-size: cover;
-    background-color: rgb(228, 249, 255);
-    
+    background-color: rgb(228, 249, 255); 
+}
+.header, .advantages {
+    font-size: 2.8rem;
+}
+.header, .advantages, .stock, .services, .work-examples {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container-header {
     position: relative;
@@ -43,9 +44,11 @@ html {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: center;
-    
-
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+.header-logo {
+    width: 30%;
 }
 .container-header::after {
     position: absolute;
@@ -55,79 +58,67 @@ html {
     width: 100%;
     border-bottom: 5px solid #474e93;
 }
-
 .container-title-contact {
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
-    
     align-items: center;
     margin-bottom: 30px;
 } 
-
 .header-title {
     font-family: "OpenSans-Bold";
     color: #000000;
-    font-size: 45px;
-    font-style: italic;
-    
+    font-size: 1em;
+    font-style: italic; 
 }
 .card-contact {
    margin-bottom: 10px;
-   
 }
 .contact-link:nth-child(n+2) {
     margin-left: 20px;
 }
-
 .contact-link {
     text-decoration: none; 
     font-family: "OpenSans-Bold";
     color: #474e93;
-    font-size: 23px;
-    font-style: italic;
-   
-    
+    font-size: 0.5em;
+    font-style: italic;   
 }
-
 .contact-link:hover {
     text-decoration: underline; 
 }
-
 .menu-list {
     margin-top: 65px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .menu-list-item {
     list-style-type: none;
-
-    width: 15%;
-    min-height: 220px;
+    width: 20%;
+    max-width: 6.9em;
+    min-width: 3.5em;
+    max-height: 6.9em;
+    min-height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-left: 30px;
     background-image: url("../images/menu-banner-link.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
     background-color: #000000;
-
     box-shadow: 5px 5px 3px 5px rgba(0, 110, 255, 0.253);
-    /*outline: 5px solid #7a92df;*/
     border: 6px solid #3b72b2;
     border-radius: 50%;
 }
-
+.menu-list-item:nth-child(n+2) {
+    margin-left: 30px;
+}
 .menu-link {
     text-decoration: none; 
     font-family: "OpenSans-Bold";
-    font-size: 23px;
+    font-size: 0.5em;
     color: #474e93;
 }
 .menu-list-item:hover {
@@ -147,17 +138,7 @@ html {
 }
 
 
-
-
-
-.header, .advantages, .stock, .services, .work-examples {
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
 .advantages {
-    
     min-height: 400px;
     margin-top: 50px;
     background-image: url("../images/advantages-background.png");
@@ -167,40 +148,34 @@ html {
     background-color: rgb(222, 230, 241);
     overflow: hidden;
 }
-
 .container-advantages {
     position: relative;
-    max-width: 60%;
+    max-width: 70%;
     min-height: 400px;
     background: linear-gradient(to top, rgb(107, 159, 228), #f6fbff);
-   /*background-color: #e0dcdd;*/
-   transform: skewX(-25deg);
-   margin-left: -10%;
-   border-right: 5px solid  rgb(154, 186, 228);
-   padding-left: 10%;
-   
-   /*outline: thick double #32a1ce;*/
+    transform: skewX(-25deg);
+    margin-left: -10%;
+    border-right: 5px solid  rgb(154, 186, 228);
+    padding-left: 10%;
 }
 .container-advantages::after {
     content: "";
     position: absolute;
-  
     top: 0;
     right: -20px;
-   
     min-height: 400px;
     width: 5px;
     background-color: rgb(154, 186, 228);
 
 }
 .advantages-title, .additional-services-title {
-    text-align: right;
-
     font-family: "OpenSans-Bold";
-    font-size: 45px;
-}
+}  
+
 .advantages-title {
     padding-right: 50px; 
+    font-size: 1em;
+    text-align: right;
 }
 
 .advantages-list, .additional-services-list {
@@ -221,7 +196,7 @@ html {
     padding: 5px;
     border-bottom: 2px solid #3b72b2;
     font-family: "OpenSans-Bold";
-    font-size: 15px;
+    font-size: 0.3em;
 }
 
 
@@ -557,4 +532,93 @@ align-self: stretch;
 .Email {
     color: #474e93;
     font-size: 25px;
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+   
+}
+@media (max-width: 1199px) and (min-width: 641px) {
+    .header, .advantages {
+        font-size: 1.875rem;
+    }
+    .container-advantages {
+        max-width: 80%;
+    }
+    .advantages, .container-advantages, .container-advantages::after {
+        min-height: 250px;
+    }
+    .container-advantages {
+        transform: skewX(0);
+        margin-left: 10px;
+        padding-bottom: 40px;
+    }
+    .advantages-title {
+        padding-right: 0; 
+        text-align: center;
+    }
+    .advantages-list {
+        align-items: center;
+        flex-direction: column;
+        padding-right: 0;
+    }
+    .advantages-list-item {
+        font-size: 0.5em;
+    }
+    
+}
+@media (max-width: 640px) {
+    .header, .advantages {
+        font-size: 1.875rem;
+    }
+    .header-logo {
+        width: 90%;
+    }
+    .menu-list-item {
+        width: calc(50% - 50px);
+    }
+    .menu-list-item:nth-child(n+2) {
+        margin-left: 0px;
+    }
+    .menu-list-item:nth-child(n+3) {
+        margin-top: 30px;
+    }
+    .menu-list-item:nth-child(2n+2) {
+        margin-left: 30px;
+    }
+
+
+    .advantages {
+        background-size: 100%; 
+    }
+    
+       
+    
+    .advantages, .container-advantages, .container-advantages::after {
+        min-height: 250px;
+    }
+    .container-advantages {
+        max-width: 95%;
+        transform: skewX(0);
+        background: none;
+        margin-left: 10px;
+        padding-bottom: 40px;
+    }
+    .advantages-title {
+        padding-right: 0; 
+        text-align: center;
+    }
+    .advantages-list {
+        align-items: center;
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .advantages-list-item {
+        font-size: 0.6em;
+    }
+
 }
