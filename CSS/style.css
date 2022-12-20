@@ -202,6 +202,7 @@ html {
 
 
 
+
 .container-stock {
     display: flex;
     position: relative;
@@ -281,18 +282,7 @@ html {
 }
 
 
-.telButton {
-    font-size: 25px;
-    
 
-}
-
-
-.ticker {
-   
-    font-size: 35px;
-    
-}
 
 
 
@@ -335,7 +325,7 @@ html {
    text-align: center;
    color:#474e93;
    font-weight: 900;
-   font-size: 25px;
+   font-size: 45px;
    white-space: nowrap;
    overflow: hidden;
 }
@@ -389,6 +379,12 @@ html {
     align-self: center;
     font-size: 20px;
 }
+.services-description {
+    font-size: 16px;
+}
+
+
+
 
 .btn-services-details {
     width: 100%;
@@ -457,6 +453,8 @@ html {
 
 .additional-services-title {
  margin: 30px 0;
+ font-size: 45px;
+ font-family: monospace;
 }
 .additional-services-list {
  flex-wrap: wrap;
@@ -591,16 +589,10 @@ align-self: stretch;
     .menu-list-item:nth-child(2n+2) {
         margin-left: 30px;
     }
-
-
     .advantages {
         background-size: 100%;
         background-position: center;
     }
-    
-       
-    
-    
     .container-advantages {
         max-width: calc(90% - 15px);
         transform: skewX(0);
@@ -617,7 +609,6 @@ align-self: stretch;
         flex-direction: column;
         padding-right: 0;
     }
-
     .advantages-list-item {
         font-size: 0.6em;
         text-shadow: 1px 1px 3px #0a131d;
