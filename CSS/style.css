@@ -299,7 +299,7 @@ html {
 .services-title, .work-examples-title, .contacts-title, .stock-title {
     position: relative;
     font-family: "OpenSans-Bold";
-    font-size: 65px;
+    font-size: 4rem;
     color: #474e93;
     text-shadow: 2px 2px 3px rgba(86, 95, 177, 0.801);
     text-align: center;
@@ -565,6 +565,9 @@ align-self: stretch;
     .advantages-list-item {
         font-size: 0.5em;
     }
+    .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
+        width: 13%;
+    }
     
 }
 @media (max-width: 640px) {
@@ -619,6 +622,12 @@ align-self: stretch;
         font-size: 0.6em;
         text-shadow: 1px 1px 3px #0a131d;
         color: #ffffff;
+    }
+    .services-title, .work-examples-title, .contacts-title, .stock-title {
+        font-size: 2.8rem;
+    }
+    .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
+        width: 8%;
     }
 
 }
