@@ -95,11 +95,12 @@ html {
 }
 .menu-list-item {
     list-style-type: none;
-    width: 20%;
-    max-width: 6.9em;
+    width: 15%;
+   /* max-width: 5em;
     min-width: 3.5em;
     max-height: 6.9em;
-    min-height: 3.5em;
+    min-height: 3.5em;*/
+    padding: 50px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -579,12 +580,14 @@ align-self: stretch;
     }
     .menu-list-item {
         width: calc(50% - 50px);
+        padding: 70px 60px;
     }
     .menu-list-item:nth-child(n+2) {
         margin-left: 0px;
     }
     .menu-list-item:nth-child(n+3) {
         margin-top: 30px;
+        padding: 60px 60px;
     }
     .menu-list-item:nth-child(2n+2) {
         margin-left: 30px;
