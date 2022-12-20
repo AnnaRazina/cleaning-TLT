@@ -96,10 +96,6 @@ html {
 .menu-list-item {
     list-style-type: none;
     width: 15%;
-   /* max-width: 5em;
-    min-width: 3.5em;
-    max-height: 6.9em;
-    min-height: 3.5em;*/
     padding: 50px 60px;
     display: flex;
     justify-content: center;
@@ -595,19 +591,18 @@ align-self: stretch;
 
 
     .advantages {
-        background-size: 100%; 
+        background-size: 100%;
+        background-position: center;
     }
     
        
     
-    .advantages, .container-advantages, .container-advantages::after {
-        min-height: 250px;
-    }
+    
     .container-advantages {
-        max-width: 95%;
+        max-width: calc(90% - 15px);
         transform: skewX(0);
         background: none;
-        margin-left: 10px;
+        margin-left: 15px;
         padding-bottom: 40px;
     }
     .advantages-title {
@@ -622,6 +617,8 @@ align-self: stretch;
 
     .advantages-list-item {
         font-size: 0.6em;
+        text-shadow: 1px 1px 3px #0a131d;
+        color: #ffffff;
     }
 
 }
