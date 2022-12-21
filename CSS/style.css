@@ -247,11 +247,6 @@ html {
 }
 
 
-
-
-
-
-
 .stock-discount {
  width: 20%;
  height: auto;
@@ -294,7 +289,6 @@ html {
     text-align: center;
     
 }
-
 .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before {
     content: "";
     position: absolute;
@@ -304,7 +298,6 @@ html {
     width: 30%;
     background-color: #474e93;
 }
-
 .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
     content: "";
     position: absolute;
@@ -314,8 +307,6 @@ html {
     width: 30%;
     background-color: #474e93;
 }
-
-
 .services-text, .stock-text {
    display: block;
    margin-left: auto;
@@ -341,41 +332,29 @@ html {
         width: 0;
     }
 }
-
-
 .general-container-services {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 60px;
-
 }
-
 .container-services {
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: rgb(107, 159, 228, 0.5);
-   
-   
 }
-
 .container-services-image {
     background-color: #555eaf;
 }
-
 .services-image, .container-services-image {
     width: 100%;
-    height: 170px;
-    
+    height: 170px;  
 }
-
-.container-services-information {
-   
+.container-services-information {  
     display: flex;
-    flex-direction: column;  
-   
+    flex-direction: column;    
 }
 .services-topic {
     align-self: center;
@@ -386,10 +365,6 @@ html {
     padding-left: 10px;
     padding-right: 10px;
 }
-
-
-
-
 .btn-services-details {
     width: 100%;
     margin: 20px 0;
@@ -425,10 +400,6 @@ html {
 .btn-details-close:hover {
     cursor: pointer;
 }
-
-
-
-
 .container-price {
    display: flex;
    align-self: flex-end;
@@ -440,25 +411,21 @@ html {
     color: aliceblue;
     background-color: #3b72b2;
     padding-left: 10px;
-    border-radius: 30%;
-   
+    border-radius: 30%;  
 }
-
 .additional-services {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 2.8rem
 }
-
 .additional-services-title {
     margin: 30px 0;
-    font-size: 45px;
+    font-size: 1em;
     font-family: monospace;
     text-align: center;
 }
-
-
 .additional-services-list {
     display: flex;
     flex-wrap: wrap;
@@ -473,10 +440,8 @@ html {
     margin-left: 40px;
     margin-top: 20px;
     font-family: "OpenSans-Bold";
-    font-size: 24px;
-   
+    font-size: 0.53em;  
 }
-
 .managers-info {
     display: flex;
     flex-direction: column;
@@ -506,17 +471,12 @@ html {
 .contact-link-services:hover, .contact-link-footer:hover {
     text-decoration: underline; 
 }
-
-
-.container-work-examples {
-    
+.container-work-examples {   
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
-    
+    overflow: hidden;    
 }
-
 .container-slider {
     display: flex;
     transition: all ease 1s;
@@ -525,9 +485,12 @@ html {
     border-top: 5px solid #474e93;
     border-bottom: 5px solid #474e93;
     outline: 5px solid #8ed1d3;
-    outline-offset: 10px;
-    
+    outline-offset: 10px;   
 }
+
+
+
+
 .address {
     display: flex;
     flex-direction: column;
@@ -681,7 +644,7 @@ align-self: stretch;
     .services-image, .container-services-image {
         height: 200px;
     }
-    .additional-services-title {
+    .additional-services {
         font-size: 2.2rem;
     }
     .additional-services-list {
