@@ -33,7 +33,7 @@ html {
 .header, .advantages {
     font-size: 2.8rem;
 }
-.header, .advantages, .stock, .services, .work-examples {
+.header, .advantages, .stock, .services, .work-examples, .contacts {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
@@ -175,8 +175,7 @@ html {
     text-align: right;
 }
 
-.advantages-list, .additional-services-list {
-    
+.advantages-list { 
     display: flex;
     list-style-type: none;
     list-style-image: url("../images/list-sign.png");
@@ -330,8 +329,8 @@ html {
    overflow: hidden;
 }
 .services-text {
-    width: 54ch;
-    animation: printed-text 5s steps(54);
+    width: 29ch;
+    animation: printed-text 2s steps(29);
 }
 .stock-text {
     width: 18ch; 
@@ -346,8 +345,9 @@ html {
 
 .general-container-services {
     display: flex;
-    margin-top: 60px;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 60px;
 
 }
 
@@ -355,7 +355,7 @@ html {
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: rgb(107, 159, 228, 0.5);
    
    
@@ -372,8 +372,10 @@ html {
 }
 
 .container-services-information {
+   
     display: flex;
     flex-direction: column;  
+   
 }
 .services-topic {
     align-self: center;
@@ -381,6 +383,8 @@ html {
 }
 .services-description {
     font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -409,8 +413,7 @@ html {
 .services-details-list {
     padding-left: 20px;
     font-family: "OpenSans-Bold";
-    padding-left: 40px;
-    padding-bottom: 20px;
+    padding: 0 20px 20px 40px;
 }
 .btn-details-close {
     display: block;
@@ -427,7 +430,9 @@ html {
 
 
 .container-price {
+   display: flex;
    align-self: flex-end;
+   margin-bottom: 10px;
   
 }
 .price {
@@ -447,22 +452,28 @@ html {
 }
 
 .additional-services-title {
- margin: 30px 0;
- font-size: 45px;
- font-family: monospace;
+    margin: 30px 0;
+    font-size: 45px;
+    font-family: monospace;
+    text-align: center;
 }
+
+
 .additional-services-list {
- flex-wrap: wrap;
- justify-content: space-evenly;
- align-items: center;
- background-color: rgb(107, 159, 228, 0.5);
- padding: 0 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    list-style-image: url("../images/list-sign.png");
+    background-color: rgb(107, 159, 228, 0.5);
+    padding: 0 30px 40px;
 }
 .additional-services-item {
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: "OpenSans-Bold";
-    font-size: 25px;
+    font-size: 24px;
    
 }
 
@@ -591,6 +602,19 @@ align-self: stretch;
     .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
         width: 13%;
     }
+    .container-services {
+        width: 35%;
+    }
+    .container-services:nth-child(n+3) {
+        margin-top: 30px;
+    }
+    .services-text, .stock-text {
+        font-size: 1.9rem;
+    }
+
+
+
+
     
 }
 @media (max-width: 640px) {
@@ -644,6 +668,26 @@ align-self: stretch;
     }
     .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
         width: 8%;
+    }
+    .services-text, .stock-text {
+        font-size: 1.12rem;
+    }
+    .container-services {
+        width: 75%;
+    }
+    .container-services:nth-child(n+2) {
+        margin-top: 30px;
+    }
+    .services-image, .container-services-image {
+        height: 200px;
+    }
+    .additional-services-title {
+        font-size: 2.2rem;
+    }
+    .additional-services-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px 30px;
     }
 
 }
