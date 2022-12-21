@@ -194,21 +194,15 @@ html {
     font-family: "OpenSans-Bold";
     font-size: 0.3em;
 }
-
-
-
-
-
-
-
-
 .container-stock {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
-    
+    background-size: cover;
+    min-height: 200px;
 }
 .container-stock:nth-child(n + 2) {
     margin-top: 30px;
@@ -245,16 +239,11 @@ html {
 .stock-spring::after {
     background-color: #92e4d6;
 }
-
-
 .stock-discount {
- width: 20%;
- height: auto;
- margin-left: 2%;
+ max-height: 180px;
  border-radius: 50%;
  z-index: 500;
 }
-
 .container-discount-information {
     display: flex;
     flex-direction: column;
@@ -264,22 +253,15 @@ html {
     width: 76%;
     z-index: 500;
 }
-
 .discount-size, .discount-information {
     color: #0a131d;
     font-family: "OpenSans-Bold";
-    font-size: 45px;
+    font-size: 2.8rem;
     text-align: center;
 }
 .discount-size {
     color: #da3e3e;
 }
-
-
-
-
-
-
 .services-title, .work-examples-title, .contacts-title, .stock-title {
     position: relative;
     font-family: "OpenSans-Bold";
@@ -562,6 +544,12 @@ align-self: stretch;
     .advantages-list-item {
         font-size: 0.5em;
     }
+    .container-discount-information {
+        max-width: 700px;
+    }
+    .discount-size, .discount-information {
+        font-size: 1.75rem;
+    }
     .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
         width: 13%;
     }
@@ -573,12 +561,7 @@ align-self: stretch;
     }
     .services-text, .stock-text {
         font-size: 1.9rem;
-    }
-
-
-
-
-    
+    } 
 }
 @media (max-width: 640px) {
     .header, .advantages {
@@ -625,6 +608,17 @@ align-self: stretch;
         font-size: 0.6em;
         text-shadow: 1px 1px 3px #0a131d;
         color: #ffffff;
+    }
+    .discount-size, .discount-information {
+        font-size: 1.12rem;
+    }
+    .container-stock {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .stock-discount {
+       margin: 2%;
+       max-height: 75px;
     }
     .services-title, .work-examples-title, .contacts-title, .stock-title {
         font-size: 2.8rem;
