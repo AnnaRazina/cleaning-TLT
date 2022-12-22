@@ -662,3 +662,16 @@ align-self: stretch;
         margin: 10px 0;
     }
 }
+@media (max-width: 640px) {
+    .services-title, .work-examples-title, .contacts-title, .stock-title {
+        margin-top: 10px;
+        border-bottom: 5px solid #3b72b2;
+        border-top: 5px solid #3b72b2;
+    }
+    .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
+        display: none;
+    }
+    .additional-services-list {
+        padding: 0 5px 30px;
+    }
+}
