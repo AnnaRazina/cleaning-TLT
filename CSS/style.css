@@ -132,7 +132,7 @@ html {
     transition: 0.5s;
 }
 .isShow-up-arrow {
-    opacity: 1;  
+    opacity: 0.7;  
 }
 
 
@@ -265,7 +265,9 @@ html {
 }
 .services-title, .work-examples-title, .contacts-title, .stock-title {
     position: relative;
+    padding: 0 5px;
     font-family: "OpenSans-Bold";
+    text-transform: uppercase;
     font-size: 4rem;
     color: #474e93;
     text-shadow: 2px 2px 3px rgba(86, 95, 177, 0.801);
@@ -278,7 +280,7 @@ html {
     left: 0;
     top: 50%;
     height: 7px;
-    width: 30%;
+    width: 25%;
     background-color: #474e93;
 }
 .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
@@ -287,7 +289,7 @@ html {
     right: 0;
     top: 50%;
     height: 7px;
-    width: 30%;
+    width: 25%;
     background-color: #474e93;
 }
 .services-text, .stock-text {
@@ -320,6 +322,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 1445px;
     margin-top: 60px;
 }
 .container-services {
@@ -435,6 +438,7 @@ html {
     margin-top: 50px;
 }
 .managers-description {
+    padding: 0 10px;
     font-family: "OpenSans-Regular";
     text-align: center;
     font-size: 20px;
@@ -504,7 +508,7 @@ align-self: stretch;
     background-color: #0088cc;  
 }
 .Email {
-    margin: 20px 10px;
+    margin: 50px 10px;
     color: #474e93;
     font-size: 25px;
     text-align: center;
@@ -547,7 +551,7 @@ align-self: stretch;
         font-size: 1.75rem;
     }
     .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
-        width: 13%;
+        width: 10%;
     }
     .container-services {
         width: 35%;
