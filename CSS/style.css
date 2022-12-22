@@ -471,10 +471,6 @@ html {
     outline: 5px solid #8ed1d3;
     outline-offset: 10px;   
 }
-
-
-
-
 .address {
     display: flex;
     flex-direction: column;
@@ -506,7 +502,6 @@ align-self: stretch;
 .Telegram {
     background-color: #0088cc;  
 }
-
 .Email {
     margin: 20px 10px;
     color: #474e93;
@@ -516,13 +511,6 @@ align-self: stretch;
 .location {
     margin: 0 auto;
     text-align: center;
-}
-
-
-
-
-@media (min-width: 1200px) {
-   
 }
 @media (max-width: 1199px) and (min-width: 641px) {
     .header, .advantages {
@@ -577,6 +565,12 @@ align-self: stretch;
     .header-logo {
         width: 90%;
     }
+    .contact-link {
+        color: #f6fbff;
+        padding: 5px 10px;
+        background-color: #0088cc;
+        border-radius: 10% / 50%;
+    }
     .menu-list-item {
         width: calc(50% - 50px);
         padding: 70px 60px;
@@ -629,9 +623,12 @@ align-self: stretch;
     }
     .services-title, .work-examples-title, .contacts-title, .stock-title {
         font-size: 2.8rem;
+        margin-top: 10px;
+        border-bottom: 5px solid #3b72b2;
+        border-top: 5px solid #3b72b2;
     }
     .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
-        width: 8%;
+        display: none;
     }
     .services-text, .stock-text {
         font-size: 1.12rem;
@@ -651,7 +648,7 @@ align-self: stretch;
     .additional-services-list {
         flex-direction: column;
         align-items: flex-start;
-        padding: 0 20px 30px;
+        padding: 0 5px 30px;
     }
     .messaging {
         flex-direction: column;
@@ -662,16 +659,16 @@ align-self: stretch;
         margin: 10px 0;
     }
 }
-@media (max-width: 640px) {
-    .services-title, .work-examples-title, .contacts-title, .stock-title {
-        margin-top: 10px;
-        border-bottom: 5px solid #3b72b2;
-        border-top: 5px solid #3b72b2;
+@media (max-width: 305px) {
+    .card-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before, .services-title::after, .work-examples-title::after, .contacts-title::after, .stock-title::after {
-        display: none;
+    .contact-link {
+        margin: 10px 0;
     }
-    .additional-services-list {
-        padding: 0 5px 30px;
+    .contact-link:nth-child(n+2) {
+        margin-left: 0;
     }
 }
