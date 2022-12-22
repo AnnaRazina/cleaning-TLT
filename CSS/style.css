@@ -300,12 +300,13 @@ html {
    font-size: 45px;
    white-space: nowrap;
    overflow: hidden;
+  
 }
-.services-text {
+.services-text-animation {
     width: 29ch;
     animation: printed-text 2s steps(29);
 }
-.stock-text {
+.stock-text-animation {
     width: 18ch; 
     animation: printed-text 2s steps(18);
 }

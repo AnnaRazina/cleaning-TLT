@@ -1,5 +1,4 @@
 'use strict'
-
 //кнопки меню
 const menuServices = document.querySelector("li.menu-services");
 menuServices.addEventListener("click", (event) => {
@@ -30,7 +29,6 @@ menuWorkExamples.addEventListener("click", (event) => {
 });
 
 //прокрутка вверх
-
 window.onscroll = function()  {
     let winY = window.scrollY;
     let btnPageUp = document.querySelector(".btn-page-up");
@@ -51,7 +49,6 @@ window.onscroll = function()  {
 }
 
 //кнопки подробнее.
-
 let btnServicesDetails = Array.from(document.querySelectorAll(".btn-services-details"));
 let openServicesDetails = btnServicesDetails.forEach(btn => btn.addEventListener("click", event => {
     event.preventDefault();
@@ -68,13 +65,35 @@ let closeServicesDetails = btnDetailsClose.forEach(btn => btn.addEventListener("
       }
    }))
 
+//запуск анимации
+const stockText = document.querySelector(".stock-text");
+const servicesText = document.querySelector(".services-text");
+function isVisible (element) {
+    let {top, bottom} = element.getBoundingClientRect(); 
+    return({top, bottom});
+}
+let stockTextAnimation = () => {
+    let coordinates = isVisible(stockText);
+    if (coordinates.top > 0 && coordinates.bottom < window.outerHeight) {
+        stockText.classList.add("stock-text-animation");
+        return
+    }
+    stockText.classList.remove("stock-text-animation");
+}
+let servicesTextAnimation = () => {
+    let coordinates = isVisible(servicesText);
+    if (coordinates.top > 0 && coordinates.bottom < window.outerHeight) {
+        servicesText.classList.add("services-text-animation");
+        return
+    }
+    servicesText.classList.remove("services-text-animation");
+}
+let stockTextScroll = document.addEventListener("scroll", stockTextAnimation);
+let servicesTextScroll = document.addEventListener("scroll", servicesTextAnimation);
 
 // слайдер
-
-
 const workExamplesImages = document.querySelectorAll(".work-examples-image");
 const containerSlider = document.querySelector(".container-slider");
-//const workExamples = document.querySelector(".work-examples");
 let slideNumber = 0;
 let width;
 
@@ -108,29 +127,3 @@ function rollSlider () {
 }
 
 let startSlider =  setInterval(rollSliderNext, 2000);
-//clearInterval(startSlider); 
-
-
-/*function openSlider () {
-    const workExamples = document.querySelector(".work-examples");
-    let blockSlider = workExamples.getBoundingClientRect();
-   // if (blockSlider.top <= window.outerHeight && blockSlider.bottom > 0) {  
-if (blockSlider.top >= window.outerHeight || blockSlider.bottom < 0) {
-    let ok = window.outerHeight;
-    let fff = ok + "ffff";
-    let x = 0;
-    clearInterval(startSlider);
-} 
-//let startSlider =  setInterval(rollSliderNext, 2500);
-
-
-
-  // setInterval(rollSliderNext, 2500);
-} 
-
-document.addEventListener("scroll", openSlider);
-openSlider();
-/*if (blockSlider.top >= window.outerHeight || blockSlider.bottom < 0) {
-    let ok = window.outerHeight;
-    alert(ok);
-}*/
