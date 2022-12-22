@@ -388,7 +388,6 @@ html {
    display: flex;
    align-self: flex-end;
    margin-bottom: 10px;
-  
 }
 .price {
     font-size: 30px;
@@ -406,9 +405,11 @@ html {
 }
 .additional-services-title {
     margin: 30px 0;
+    padding: 0 5px;
     font-size: 1em;
     font-family: monospace;
     text-align: center;
+    border: thick double #32a1ce;
 }
 .additional-services-list {
     display: flex;
@@ -644,6 +645,9 @@ align-self: stretch;
     }
     .additional-services {
         font-size: 2.2rem;
+    }
+    .additional-services-title {
+        margin: 0;
     }
     .additional-services-list {
         flex-direction: column;
