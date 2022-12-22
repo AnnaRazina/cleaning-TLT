@@ -507,10 +507,15 @@ align-self: stretch;
 }
 
 .Email {
+    margin: 20px 10px;
     color: #474e93;
     font-size: 25px;
 }
-
+.location {
+    
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 
@@ -647,5 +652,12 @@ align-self: stretch;
         align-items: flex-start;
         padding: 0 20px 30px;
     }
-
+    .messaging {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Viber, .WhatsApp, .Telegram {
+        width: 75%;
+        margin: 10px 0;
+    }
 }
