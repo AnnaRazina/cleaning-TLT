@@ -1,5 +1,5 @@
 'use strict'
-//кнопки меню
+
 const menuServices = document.querySelector("li.menu-services");
 menuServices.addEventListener("click", (event) => {
     event.preventDefault();
@@ -28,7 +28,6 @@ menuWorkExamples.addEventListener("click", (event) => {
     workExamples.scrollIntoView();
 });
 
-//прокрутка вверх
 window.onscroll = function()  {
     let winY = window.scrollY;
     let btnPageUp = document.querySelector(".btn-page-up");
@@ -48,24 +47,21 @@ window.onscroll = function()  {
     };
 }
 
-//кнопки подробнее.
 let btnServicesDetails = Array.from(document.querySelectorAll(".btn-services-details"));
 let openServicesDetails = btnServicesDetails.forEach(btn => btn.addEventListener("click", event => {
     event.preventDefault();
     if(event.target.closest(".container-services-details").querySelector(".container-details-list")) {
       btn.closest(".container-services-details").querySelector(".container-details-list").classList.add("services-details-activ")
     }
-  }))
-
+  }));
 let btnDetailsClose = Array.from(document.querySelectorAll(".btn-details-close"));
 let closeServicesDetails = btnDetailsClose.forEach(btn => btn.addEventListener("click", event => {
     event.preventDefault();
       if(event.target.closest(".container-services-details").querySelector(".container-details-list")) {
        btn.closest(".container-services-details").querySelector(".container-details-list").classList.remove("services-details-activ")
       }
-   }))
+   }));
 
-//запуск анимации
 const stockText = document.querySelector(".stock-text");
 const servicesText = document.querySelector(".services-text");
 function isVisible (element) {
@@ -91,12 +87,10 @@ let servicesTextAnimation = () => {
 let stockTextScroll = document.addEventListener("scroll", stockTextAnimation);
 let servicesTextScroll = document.addEventListener("scroll", servicesTextAnimation);
 
-// слайдер
 const workExamplesImages = document.querySelectorAll(".work-examples-image");
 const containerSlider = document.querySelector(".container-slider");
 let slideNumber = 0;
 let width;
-
 function init() {
 width = document.querySelector(".container-work-examples").offsetWidth;
     if(workExamplesImages && workExamplesImages.length > 0) {
@@ -108,10 +102,8 @@ width = document.querySelector(".container-work-examples").offsetWidth;
         rollSlider();
     };
 }
-
 window.addEventListener("resize", init);
 init();
-
 function rollSliderNext () {
     if(workExamplesImages && workExamplesImages.length > 0) {
         slideNumber ++;
@@ -121,9 +113,7 @@ function rollSliderNext () {
         rollSlider();
     }
 }
-
 function rollSlider () {
     containerSlider.style.transform = "translate(-"+ slideNumber * width +"px)";
 }
-
 let startSlider =  setInterval(rollSliderNext, 2000);

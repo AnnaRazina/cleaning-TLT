@@ -134,8 +134,6 @@ html {
 .isShow-up-arrow {
     opacity: 0.7;  
 }
-
-
 .advantages {
     min-height: 400px;
     margin-top: 50px;
@@ -169,19 +167,15 @@ html {
 .advantages-title, .additional-services-title {
     font-family: "OpenSans-Bold";
 }  
-
 .advantages-title {
     padding-right: 50px; 
     font-size: 1em;
     text-align: right;
 }
-
 .advantages-list { 
     display: flex;
     list-style-type: none;
-    list-style-image: url("../images/list-sign.png");
-   
-    
+    list-style-image: url("../images/list-sign.png"); 
 }
 .advantages-list {
     align-items: flex-end;
@@ -271,8 +265,7 @@ html {
     font-size: 4rem;
     color: #474e93;
     text-shadow: 2px 2px 3px rgba(86, 95, 177, 0.801);
-    text-align: center;
-    
+    text-align: center;  
 }
 .services-title::before, .work-examples-title::before, .contacts-title::before, .stock-title::before {
     content: "";
@@ -303,7 +296,6 @@ html {
    font-size: 45px;
    white-space: nowrap;
    overflow: hidden;
-  
 }
 .services-text-animation {
     width: 29ch;
@@ -483,10 +475,9 @@ html {
     padding: 40px 15px;
 }
 .messaging {
-display: flex;
-justify-content: space-around;
-align-self: stretch;
-
+    display: flex;
+    justify-content: space-around;
+    align-self: stretch;
 }
 .Viber, .WhatsApp, .Telegram {
     text-decoration: none; 
@@ -591,13 +582,11 @@ align-self: stretch;
         margin-left: 30px;
     }
     .advantages {
-        background-size: 100%;
-        background-position: center;
+        background-image: none;
     }
     .container-advantages {
         max-width: calc(90% - 15px);
         transform: skewX(0);
-        background: none;
         margin-left: 15px;
         padding-bottom: 40px;
     }
