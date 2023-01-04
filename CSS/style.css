@@ -370,19 +370,36 @@ html {
     padding: 0 20px 20px 40px;
 }
 .btn-details-close {
-    display: block;
-    margin-left: auto;
-    background-color: #da3e3e;
-    font-family: "OpenSans-Bold";
-    text-transform: uppercase;
-}
-.btn-details-close:hover {
+    position: relative;
+    left: 95%;
+    margin-top: 10px;
+    text-indent: -9999px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
     cursor: pointer;
 }
+.btn-details-close:before, .btn-details-close:after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+.btn-details-close:before, .btn-details-close:after {
+    width: 3px;
+    height: 25px;
+  }
+.btn-details-close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+.btn-details-close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 .container-price {
-   display: flex;
-   align-self: flex-end;
-   margin-bottom: 10px;
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
 }
 .price {
     font-size: 30px;
